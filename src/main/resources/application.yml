@@ -1,0 +1,26 @@
+server:
+  port: 10038
+
+spring.jpa:
+    show-sql: true
+    database: MYSQL
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+spring.datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/activitidemo?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: 123456
+    initial-size: 10
+    max-wait: 10000
+    maximum-pool-size: 100
+    max-active: 100
+    max-idle: 10
+    minIdle: 2
+
+spring:
+  activiti:
+    history-level: full
